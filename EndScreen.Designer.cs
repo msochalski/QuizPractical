@@ -30,7 +30,7 @@ namespace QuizPractical
         private void InitializeComponent()
         {
             this.QuizOver = new System.Windows.Forms.Label();
-            this.ScoreResult = new System.Windows.Forms.Label();
+            this.scoreLbl = new System.Windows.Forms.Label();
             this.PlayAgain = new System.Windows.Forms.Button();
             this.Quit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -39,49 +39,54 @@ namespace QuizPractical
             // 
             this.QuizOver.AutoSize = true;
             this.QuizOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuizOver.Location = new System.Drawing.Point(276, 79);
+            this.QuizOver.Location = new System.Drawing.Point(414, 122);
+            this.QuizOver.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.QuizOver.Name = "QuizOver";
-            this.QuizOver.Size = new System.Drawing.Size(239, 55);
+            this.QuizOver.Size = new System.Drawing.Size(359, 82);
             this.QuizOver.TabIndex = 0;
             this.QuizOver.Text = "Quiz Over";
             // 
-            // ScoreResult
+            // scoreLbl
             // 
-            this.ScoreResult.AutoSize = true;
-            this.ScoreResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScoreResult.Location = new System.Drawing.Point(172, 175);
-            this.ScoreResult.Name = "ScoreResult";
-            this.ScoreResult.Size = new System.Drawing.Size(100, 37);
-            this.ScoreResult.TabIndex = 1;
-            this.ScoreResult.Text = "Score";
+            this.scoreLbl.AutoSize = true;
+            this.scoreLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLbl.Location = new System.Drawing.Point(258, 269);
+            this.scoreLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.scoreLbl.Name = "scoreLbl";
+            this.scoreLbl.Size = new System.Drawing.Size(150, 55);
+            this.scoreLbl.TabIndex = 1;
+            this.scoreLbl.Text = "Score";
             // 
             // PlayAgain
             // 
-            this.PlayAgain.Location = new System.Drawing.Point(286, 279);
+            this.PlayAgain.Location = new System.Drawing.Point(429, 429);
+            this.PlayAgain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PlayAgain.Name = "PlayAgain";
-            this.PlayAgain.Size = new System.Drawing.Size(75, 23);
+            this.PlayAgain.Size = new System.Drawing.Size(112, 35);
             this.PlayAgain.TabIndex = 2;
             this.PlayAgain.Text = "Play Again";
             this.PlayAgain.UseVisualStyleBackColor = true;
             // 
             // Quit
             // 
-            this.Quit.Location = new System.Drawing.Point(440, 279);
+            this.Quit.Location = new System.Drawing.Point(660, 429);
+            this.Quit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Quit.Name = "Quit";
-            this.Quit.Size = new System.Drawing.Size(75, 23);
+            this.Quit.Size = new System.Drawing.Size(112, 35);
             this.Quit.TabIndex = 3;
             this.Quit.Text = "Quit";
             this.Quit.UseVisualStyleBackColor = true;
             // 
             // EndScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.Quit);
             this.Controls.Add(this.PlayAgain);
-            this.Controls.Add(this.ScoreResult);
+            this.Controls.Add(this.scoreLbl);
             this.Controls.Add(this.QuizOver);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EndScreen";
             this.Text = "EndScreen";
             this.ResumeLayout(false);
@@ -92,7 +97,7 @@ namespace QuizPractical
         #endregion
 
         private System.Windows.Forms.Label QuizOver;
-        private System.Windows.Forms.Label ScoreResult;
+        private System.Windows.Forms.Label scoreLbl;
         private System.Windows.Forms.Button PlayAgain;
         private System.Windows.Forms.Button Quit;
     }

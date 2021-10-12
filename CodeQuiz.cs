@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuizPractical
 {
-    class CodeQuiz : Quiz
+    class CodingQuiz : Quiz
     {
         public CodingQuiz(Player player, int time) : base(player)
         {

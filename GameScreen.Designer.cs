@@ -29,94 +29,117 @@ namespace QuizPractical
         /// </summary>
         private void InitializeComponent()
         {
-            this.QuestionTitle1 = new System.Windows.Forms.Label();
-            this.TimeLeft1 = new System.Windows.Forms.Label();
-            this.QuestionText1 = new System.Windows.Forms.Label();
-            this.Answer1 = new System.Windows.Forms.Button();
-            this.Answer2 = new System.Windows.Forms.Button();
-            this.Answer3 = new System.Windows.Forms.Button();
-            this.Answer4 = new System.Windows.Forms.Button();
+            this.questionLabel = new System.Windows.Forms.Label();
+            this.timerLbl = new System.Windows.Forms.Label();
+            this.questionTextValue = new System.Windows.Forms.Label();
+            this.answer1Button = new System.Windows.Forms.Button();
+            this.answer2Button = new System.Windows.Forms.Button();
+            this.answer3Button = new System.Windows.Forms.Button();
+            this.answer4Button = new System.Windows.Forms.Button();
+            this.CurrentQuestionPosition = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // QuestionTitle1
+            // questionLabel
             // 
-            this.QuestionTitle1.AutoSize = true;
-            this.QuestionTitle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionTitle1.Location = new System.Drawing.Point(312, 103);
-            this.QuestionTitle1.Name = "QuestionTitle1";
-            this.QuestionTitle1.Size = new System.Drawing.Size(156, 33);
-            this.QuestionTitle1.TabIndex = 0;
-            this.QuestionTitle1.Text = "Question 1";
-            this.QuestionTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.questionLabel.AutoSize = true;
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Location = new System.Drawing.Point(468, 158);
+            this.questionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.questionLabel.Name = "questionLabel";
+            this.questionLabel.Size = new System.Drawing.Size(221, 52);
+            this.questionLabel.TabIndex = 0;
+            this.questionLabel.Text = "Question: ";
+            this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TimeLeft1
+            // timerLbl
             // 
-            this.TimeLeft1.AutoSize = true;
-            this.TimeLeft1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLeft1.Location = new System.Drawing.Point(673, 33);
-            this.TimeLeft1.Name = "TimeLeft1";
-            this.TimeLeft1.Size = new System.Drawing.Size(69, 20);
-            this.TimeLeft1.TabIndex = 1;
-            this.TimeLeft1.Text = "Time: 10";
+            this.timerLbl.AutoSize = true;
+            this.timerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLbl.Location = new System.Drawing.Point(1010, 51);
+            this.timerLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timerLbl.Name = "timerLbl";
+            this.timerLbl.Size = new System.Drawing.Size(107, 29);
+            this.timerLbl.TabIndex = 1;
+            this.timerLbl.Text = "Time: 10";
             // 
-            // QuestionText1
+            // questionTextValue
             // 
-            this.QuestionText1.AutoSize = true;
-            this.QuestionText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionText1.Location = new System.Drawing.Point(201, 165);
-            this.QuestionText1.Name = "QuestionText1";
-            this.QuestionText1.Size = new System.Drawing.Size(351, 29);
-            this.QuestionText1.TabIndex = 2;
-            this.QuestionText1.Text = "Question Text ______________";
+            this.questionTextValue.AutoSize = true;
+            this.questionTextValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionTextValue.Location = new System.Drawing.Point(302, 254);
+            this.questionTextValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.questionTextValue.Name = "questionTextValue";
+            this.questionTextValue.Size = new System.Drawing.Size(531, 40);
+            this.questionTextValue.TabIndex = 2;
+            this.questionTextValue.Text = "Question Text ______________";
             // 
-            // Answer1
+            // answer1Button
             // 
-            this.Answer1.Location = new System.Drawing.Point(206, 236);
-            this.Answer1.Name = "Answer1";
-            this.Answer1.Size = new System.Drawing.Size(119, 66);
-            this.Answer1.TabIndex = 3;
-            this.Answer1.Text = "Answer 1";
-            this.Answer1.UseVisualStyleBackColor = true;
+            this.answer1Button.Location = new System.Drawing.Point(309, 363);
+            this.answer1Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.answer1Button.Name = "answer1Button";
+            this.answer1Button.Size = new System.Drawing.Size(178, 102);
+            this.answer1Button.TabIndex = 3;
+            this.answer1Button.Text = "Answer 1";
+            this.answer1Button.UseVisualStyleBackColor = true;
+            this.answer1Button.Click += new System.EventHandler(this.answer1Button_Click);
             // 
-            // Answer2
+            // answer2Button
             // 
-            this.Answer2.Location = new System.Drawing.Point(433, 236);
-            this.Answer2.Name = "Answer2";
-            this.Answer2.Size = new System.Drawing.Size(119, 66);
-            this.Answer2.TabIndex = 4;
-            this.Answer2.Text = "Answer 2";
-            this.Answer2.UseVisualStyleBackColor = true;
+            this.answer2Button.Location = new System.Drawing.Point(650, 363);
+            this.answer2Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.answer2Button.Name = "answer2Button";
+            this.answer2Button.Size = new System.Drawing.Size(178, 102);
+            this.answer2Button.TabIndex = 4;
+            this.answer2Button.Text = "Answer 2";
+            this.answer2Button.UseVisualStyleBackColor = true;
+            this.answer2Button.Click += new System.EventHandler(this.answer2Button_Click);
             // 
-            // Answer3
+            // answer3Button
             // 
-            this.Answer3.Location = new System.Drawing.Point(206, 321);
-            this.Answer3.Name = "Answer3";
-            this.Answer3.Size = new System.Drawing.Size(119, 66);
-            this.Answer3.TabIndex = 5;
-            this.Answer3.Text = "Answer 3";
-            this.Answer3.UseVisualStyleBackColor = true;
+            this.answer3Button.Location = new System.Drawing.Point(309, 494);
+            this.answer3Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.answer3Button.Name = "answer3Button";
+            this.answer3Button.Size = new System.Drawing.Size(178, 102);
+            this.answer3Button.TabIndex = 5;
+            this.answer3Button.Text = "Answer 3";
+            this.answer3Button.UseVisualStyleBackColor = true;
+            this.answer3Button.Click += new System.EventHandler(this.answer3Button_Click);
             // 
-            // Answer4
+            // answer4Button
             // 
-            this.Answer4.Location = new System.Drawing.Point(433, 321);
-            this.Answer4.Name = "Answer4";
-            this.Answer4.Size = new System.Drawing.Size(119, 66);
-            this.Answer4.TabIndex = 6;
-            this.Answer4.Text = "Answer 4";
-            this.Answer4.UseVisualStyleBackColor = true;
+            this.answer4Button.Location = new System.Drawing.Point(650, 494);
+            this.answer4Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.answer4Button.Name = "answer4Button";
+            this.answer4Button.Size = new System.Drawing.Size(178, 102);
+            this.answer4Button.TabIndex = 6;
+            this.answer4Button.Text = "Answer 4";
+            this.answer4Button.UseVisualStyleBackColor = true;
+            this.answer4Button.Click += new System.EventHandler(this.answer4Button_Click);
+            // 
+            // CurrentQuestionPosition
+            // 
+            this.CurrentQuestionPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentQuestionPosition.Location = new System.Drawing.Point(696, 158);
+            this.CurrentQuestionPosition.Name = "CurrentQuestionPosition";
+            this.CurrentQuestionPosition.Size = new System.Drawing.Size(75, 52);
+            this.CurrentQuestionPosition.TabIndex = 7;
+            this.CurrentQuestionPosition.Text = "1";
             // 
             // GameScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Answer4);
-            this.Controls.Add(this.Answer3);
-            this.Controls.Add(this.Answer2);
-            this.Controls.Add(this.Answer1);
-            this.Controls.Add(this.QuestionText1);
-            this.Controls.Add(this.TimeLeft1);
-            this.Controls.Add(this.QuestionTitle1);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.CurrentQuestionPosition);
+            this.Controls.Add(this.answer4Button);
+            this.Controls.Add(this.answer3Button);
+            this.Controls.Add(this.answer2Button);
+            this.Controls.Add(this.answer1Button);
+            this.Controls.Add(this.questionTextValue);
+            this.Controls.Add(this.timerLbl);
+            this.Controls.Add(this.questionLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GameScreen";
             this.Text = "GameScreen";
             this.ResumeLayout(false);
@@ -126,12 +149,13 @@ namespace QuizPractical
 
         #endregion
 
-        private System.Windows.Forms.Label QuestionTitle1;
-        private System.Windows.Forms.Label TimeLeft1;
-        private System.Windows.Forms.Label QuestionText1;
-        private System.Windows.Forms.Button Answer1;
-        private System.Windows.Forms.Button Answer2;
-        private System.Windows.Forms.Button Answer3;
-        private System.Windows.Forms.Button Answer4;
+        private System.Windows.Forms.Label questionLabel;
+        private System.Windows.Forms.Label timerLbl;
+        private System.Windows.Forms.Label questionTextValue;
+        private System.Windows.Forms.Button answer1Button;
+        private System.Windows.Forms.Button answer2Button;
+        private System.Windows.Forms.Button answer3Button;
+        private System.Windows.Forms.Button answer4Button;
+        private System.Windows.Forms.Label CurrentQuestionPosition;
     }
 }
